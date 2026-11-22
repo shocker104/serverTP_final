@@ -40,9 +40,9 @@ app.get("/recurso/:id", async (req, res) => {
     const data = await fs.readFile("articulos.json", "utf-8");
     const articulos = JSON.parse(data);
 
-    const articulo = articulos.find((art) => art.id === id);
+    const articulo = articulos.find((artic) => artic.id === id);
     if (!articulo) {
-      return res.status(404).send("No se encontró un libro con dicho id");
+      return res.status(404).send("No se encontró un articulo con dicho id");
     }
     res.json(articulo);
   } catch (error) {

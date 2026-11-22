@@ -1,44 +1,44 @@
 [
   {
-    "id": "1",
+    "id": 1,
     "articulo": "dado",
     "tipo": "d6",
-    "precio": "1000",
-    "stock": "1000"
+    "precio": 1000,
+    "stock": 1000
   },
   {
-    "id": "2",
+    "id": 2,
     "articulo": "miniatura",
     "tipo": "32mm",
-    "precio": "10000",
-    "stock": "100"
+    "precio": 10000,
+    "stock": 100
   },
   {
-    "id": "3",
+    "id": 3,
     "articulo": "pinturaAcrilica",
     "tipo": "azulMarino",
-    "precio": "5000",
-    "stock": "20"
+    "precio": 5000,
+    "stock": 20
   },
   {
-    "id": "4",
+    "id": 4,
     "articulo": "mazoCartas",
     "tipo": "starterMTG",
-    "precio": "100000",
-    "stock": "10"
+    "precio": 100000,
+    "stock": 10
   },
   {
-    "id": "5",
+    "id": 5,
     "articulo": "booster",
     "tipo": "cuartaMTG",
-    "precio": "100000",
-    "stock": "30"
+    "precio": 100000,
+    "stock": 30
   },
   {
-    "id": "6",
+    "id": 6,
     "articulo": "dado",
     "tipo": "d10",
-    "precio": "2000",
-    "stock": "1500"
+    "precio": 2000,
+    "stock": 1500
   }
 ]
