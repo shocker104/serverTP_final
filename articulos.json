@@ -33,5 +33,12 @@
     "tipo": "cuartaMTG",
     "precio": "100000",
     "stock": "30"
+  },
+  {
+    "id": "6",
+    "articulo": "dado",
+    "tipo": "d10",
+    "precio": "2000",
+    "stock": "1500"
   }
 ]
