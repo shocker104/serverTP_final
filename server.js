@@ -17,7 +17,7 @@ app.get("/", (req, res) => {
   res.json({ message: "Bienvenido a la taberna del nerd" });
 });
 
-app.get("/recursos", async (req, res) => {
+app.get("/recurso", async (req, res) => {
   try {
     const data = await fs.readFile("articulos.json", "utf-8");
     const articulos = JSON.parse(data);
@@ -28,32 +28,30 @@ app.get("/recursos", async (req, res) => {
   }
 });
 
-app.get("/books/:id", async (req, res) => {
+app.get("/recurso/:id", async (req, res) => {
   try {
     const idParams = req.params.id;
     const id = parseInt(idParams, 10);
 
-    // validaciones: id debe ser un número, entero positivo
     if (Number.isNaN(id) || id <= 0) {
       return res.status(400).send("El id es inválido.");
     }
 
-    // Leer el archivo de la lista de libros
-    const data = await fs.readFile("books.json", "utf-8");
-    const books = JSON.parse(data);
+    const data = await fs.readFile("articulos.json", "utf-8");
+    const articulos = JSON.parse(data);
 
-    // Buscamos el libro por id
-    const book = books.find((libro) => libro.id === id);
-    // Validamos que no se encuentre un libro con dicho id
-    if (!book) {
+    const articulo = articulos.find((art) => art.id === id);
+    if (!articulo) {
       return res.status(404).send("No se encontró un libro con dicho id");
     }
-    // Devolvemos el libro
-    res.json(book);
-  } catch (error) {}
+    res.json(articulo);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: "Error al realizar la petición" });
+  }
 });
 
-app.get("/recursos/buscar", async (req, res) => {
+app.get("/recurso/buscar", async (req, res) => {
   try {
     const data = await fs.readFile("articulos.json", "utf-8");
     const articulos = JSON.parse(data);
